@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import PageHTML from "../components/PageHTML.jsx";
 import html from "./fragments/Contact.html?raw";
+import { apiFetch } from "../utils/api";
 
 export default function Contact() {
   const containerRef = useRef(null);
@@ -39,7 +40,7 @@ export default function Contact() {
       if (submitBtn) submitBtn.disabled = true;
 
       try {
-        const res = await fetch("/api/contact", {
+        const res = await apiFetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
