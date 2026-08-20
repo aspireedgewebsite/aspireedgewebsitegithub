@@ -1,0 +1,1098 @@
+<style>
+
+    #rating span{
+        margin-right:10px;
+        justify-content: center;
+        gap: 15px;
+        color: #444;
+    }
+
+    .common-hero {
+        width: 100%;
+        height: 30vh; 
+        background-image: url('/Banner/programs.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+
+        .common-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); 
+            z-index: 0;
+        }
+
+        .common-hero .container,
+        .common-hero .main-heading {
+            position: relative;
+            z-index: 2;
+        }
+
+            .common-hero .main-heading h1 {
+                color: #ffffff;
+            
+            }
+
+    #brand-logo-1,
+    #brand-logo-2 {
+        max-width: 149px !important; 
+        height: auto !important;
+    }
+
+
+    #business-analytics-box {
+        background-image: url('/Imagess/Pro-1.webp');
+    }
+
+    #cyber-security-box {
+        background-image: url('/Imagess/Pro-2.webp');
+    }
+
+    #stack-development-box {
+        background-image: url('/Imagess/Pro-3.webp');
+    }
+
+    #data-science-box {
+        background-image: url('/Imagess/Pro-4.webp');
+    }
+
+    #internet-things-box {
+        background-image: url('/Imagess/Pro-5.webp');
+    }
+
+    #cloud-computing-box {
+        background-image: url('/Imagess/Pro-6.webp');
+    }
+
+    #machine-learning-box {
+        background-image: url('/Imagess/Pro-7.webp');
+    }
+
+    #artificial-intel-box {
+        background-image: url('/Imagess/Pro-8.webp');
+    }
+
+    #ui-design-box {
+        background-image: url('/Imagess/Pro-9.webp');
+    }
+
+    #embedded-system-box {
+        background-image: url('/Imagess/Pro-10.webp');
+    }
+
+    #auto-cad-box {
+        background-image: url('/Imagess/Pro-11.webp');
+    }
+
+    #digital-marketing-box {
+        background-image: url('/Imagess/Pro-12.webp');
+    }
+
+    #hybrid-box {
+        background-image: url('/Imagess/Pro-13.webp');
+    }
+
+    #modelling-box {
+        background-image: url('/Imagess/Pro-14.webp');
+    }
+
+    #management-box {
+        background-image: url('/Imagess/Pro-15.webp');
+    }
+
+    /* Common styles */
+    #business-analytics-box,
+    #cyber-security-box,
+    #stack-development-box,
+    #data-science-box,
+    #internet-things-box,
+    #cloud-computing-box,
+    #machine-learning-box,
+    #artificial-intel-box,
+    #ui-design-box,
+    #embedded-system-box,
+    #auto-cad-box,
+    #digital-marketing-box,
+    #hybrid-box,
+    #modelling-box,
+    #management-box {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 180px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .heading1-w {
+        text-align: justify;
+    }
+
+    .span img {
+        width: 50px; /* Increase logo width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .solution .item-box .icon {
+        margin-right: 20px;
+        width: 151px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 60px;
+        background-color: rgba(161, 233, 52, 0.0941176471);
+        transition: all 0.4s;
+    }
+
+    /* Mentor Card */
+    .mentor-card {
+        background: #E31C23;
+        border-radius: 16px;
+        padding: 70px 20px 30px; /* extra top padding for image */
+        color: #fff;
+        transition: transform 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        margin-bottom: 0px; /* space between cards */
+    }
+
+        /* Hover effect */
+        .mentor-card:hover {
+            transform: translateY(-8px);
+        }
+
+    /* Mentor Image */
+    .mentor-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 3px solid #fff;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Adjust spacing */
+    .mentor-card h5 {
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* Role text */
+    .mentor-card .role {
+        color: #ffeb3b;
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding-top: 8px;
+        min-height: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        width: 100%;
+    }
+
+    /* LinkedIn Button */
+    .linkedin-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: #0A66C2;
+        color: #fff;
+        font-size: 20px;
+        margin-top: auto;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+        .linkedin-btn:hover {
+            background: #004182;
+        }
+
+    /* Grid responsive fix */
+    #mentor-row {
+        row-gap: 60px; /* vertical spacing between rows */
+    }
+
+    /* Desktop (5 cards per row) */
+    @@media (min-width: 1200px) {
+        .col-lg-2-4
+
+    {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    }
+
+    /* Tablet (2 cards per row) */
+    @@media (max-width: 991px) {
+        .col-md-6
+
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    }
+
+    /* Mobile (1 card per row) */
+    @@media (max-width: 575px) {
+        .col-md-6
+
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mentor-card {
+        padding: 80px 20px 30px; /* more breathing room */
+    }
+
+    .mentor-img {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+    }
+
+    .mentor-card h5 {
+        font-size: 16px;
+    }
+
+    .mentor-card .role {
+        font-size: 14px;
+    }
+
+    }
+
+
+#mentor-padding {
+    padding: 0;
+    margin-bottom: 76px;
+}
+
+#mentor-row {
+    margin-top: 80px;
+}
+
+#student{
+    padding: 20px;
+}
+
+.testimonial-section {
+    padding: 0px 0;
+    background: #fff;
+}
+
+.testimonial-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.testimonial-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.testimonial-content {
+    background: #f9fbff;
+    border: 1px solid #d0d7e6;
+    border-radius: 12px;
+    padding: 20px 24px;
+    position: relative;
+    flex: 1;
+}
+
+.testimonial-content::before {
+    content: "❝";
+    font-size: 32px;
+    color: #E31C23;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+.testimonial-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    text-align: justify;
+}
+
+.testimonial-content span {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #E31C23;
+    font-style: normal;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E31C23;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #E31C23;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+@@media (max-width: 768px) {
+    .testimonial-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .testimonial-img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .testimonial-content {
+        text-align: center;
+    }
+    .testimonial-content p {
+        text-align: center;
+    }
+}
+</style>       
+<!--=====HERO AREA START=======-->
+
+<div class="common-hero">
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-lg-6 m-auto">
+                <div class="main-heading">
+                    <h1>Specialized Training Programs</h1>
+                    <div class="space16"></div>
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--=====HERO AREA END=======-->
+
+<section class="hero10-benar">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="marquee-wrap marquee-wrap-inner">
+                    <div class="marquee-text">
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo1.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo2.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo3.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo1.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo2.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo3.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo1.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo2.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo3.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-after"></div>
+    </div>
+</section>
+
+<div class="space100"></div>
+
+<!--=====SERVICE AREA START=======-->
+
+<div class="servcie2 service-page-sec">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="business-analytics-box"></div>
+                        <a href="/business" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/business">Business Analytics</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.8 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 467 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="cyber-security-box"></div>
+                        <a href="/cyber" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/cyber">Cyber Security</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.6 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 423 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="stack-development-box"></div>
+                        <a href="/full" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/full">Full Stack Development</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.7 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 323 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="data-science-box"></div>
+                        <a href="/data" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/data">Data Science</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.0 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 568 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="internet-things-box"></div>
+                        <a href="/internet" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/internet">Internet of Things (IoT)</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.5 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 619 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="cloud-computing-box"></div>
+                        <a href="/cloud" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/cloud">Cloud Computing</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.7 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 523 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="machine-learning-box"></div>
+                        <a href="/ml" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/ml">Machine Learning</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.7 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 625 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="artificial-intel-box"></div>
+                        <a href="/ai" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/ai">Artificial Intelligence</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.2 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 603 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="ui-design-box"></div>
+                        <a href="/ui" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/ui">UI/UX Design</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.8 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 501 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="servcie2 service-page-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="embedded-system-box"></div>
+                        <a href="/embedded" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/embedded">Embedded Systems</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.7 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 623 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="auto-cad-box"></div>
+                        <a href="/auto" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/auto">AutoCAD</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.3 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 601 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="digital-marketing-box"></div>
+                        <a href="/digital" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/digital">Digital Marketing</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.9 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 611 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="hybrid-box"></div>
+                        <a href="/vehicles" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/vehicles">Hybrid Electric Vehicles</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.5 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 621 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="modelling-box"></div>
+                        <a href="/financial" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/financial">Financial Modelling & Analysis</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.7 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 623 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="">
+                    <div class="servcie2-box">
+                        <div id="management-box"></div>
+                        <a href="/hr" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="heading1">
+                            <h4><a href="/hr">HR Management</a></h4>
+                            <div class="space16"></div>
+                            <div class="rating">
+                                <span><i class="fas fa-star"> 4.0 </i></span>
+                                <span><i class="fas fa-user-graduate"></i> 600 Students</span>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--=====SERVICE AREA END=======-->
+
+
+<!--=====SOLUTION AREA START=======-->
+
+<div class="solution about-solution sp">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="images">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="image">
+                                <img src="/assets/img/about/visiton-img1.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="space30"></div>
+                            <div class="image">
+                                <img src="/assets/img/about/visiton-img2.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="space30"></div>
+                            <div class="image">
+                                <img src="/assets/img/about/visiton-img3.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="heading1">
+                    <span class="span"><img src="/aspireedge-bullet.png" alt=""> Our Vision</span>
+                    <h2>Empowering Learning: Our Vision at AspireEdge</h2>
+                    <div class="space16"></div>
+                    <p>
+                        At AspireEdge, our vision is to lead the way in transforming education through innovative digital learning solutions. We envision a future where learners and institutions across the globe have seamless access to personalized, effective, and scalable learning experiences powered by our LMS platform.
+                    </p>
+
+                    <div class="item-box">
+                        <div class="icon">
+                            <div class="">
+                                <img src="/new-images/Favicon_2-removebg-preview.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h3><a href="#">Smart Learning Infrastructure </a></h3>
+                            <div class="space10"></div>
+                            <p>Build a reliable and engaging digital learning environment that supports academic excellence and enables seamless content delivery, collaboration, and learner progress tracking.</p>
+                        </div>
+                    </div>
+
+                    <div class="item-box">
+                        <div class="icon">
+                            <div class="">
+                                <img src="/new-images/Favicon_1-removebg-preview.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h3><a href="#">Managed LMS Services</a></h3>
+                            <div class="space10"></div>
+                            <p>Focus on your core educational goals while we take care of your learning management platform — from content management and user support to performance monitoring and system upgrades.</p>
+                        </div>
+                    </div>
+
+                    <div class="space30"></div>
+                   
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 
+
+<!--=====SOLUTION AREA END=======-->
+<!--=====MENTORS SECTION START=======-->
+
+<div class="mentors sp" id="mentor-padding">
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <div class="heading1">
+                <h2 id="mentor">Mentors That are Ready to Guide You Quickly</h2>
+                <div class="space16"></div>
+                <p id="para">
+                    We are ready to assist, advise, encourage you to lead and listen as you begin your courses.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="mentor-row">
+            <!-- Mentor 1 -->
+            <div class="col-lg-2-4 col-md-6">
+                <div class="mentor-card">
+                    <img src="" class="mentor-img" alt="Garima Mittal">
+                    <h5>Amit Saw</h5>
+                    <p class="role">Cloud Computing Trainer</p>
+                    <a href="https://www.linkedin.com" target="_blank" class="linkedin-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Repeat for other mentors -->
+            <div class="col-lg-2-4 col-md-6">
+                <div class="mentor-card">
+                    <img src="" class="mentor-img" alt="Indrajeet Kumar">
+                    <h5>Indrajeet Kumar</h5>
+                    <p class="role">Full Stack Developer</p>
+                    <a href="https://www.linkedin.com" target="_blank" class="linkedin-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-2-4 col-md-6">
+                <div class="mentor-card">
+                    <img src="/new-images/uttam.jpeg" class="mentor-img" alt="Uttam Grade">
+                    <h5>Uttam Grade</h5>
+                    <p class="role">Data science</p>
+                    <a href="https://www.linkedin.com/in/uttamgrade/" target="_blank" class="linkedin-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-2-4 col-md-6">
+                <div class="mentor-card">
+                    <img src="/new-images/cybersecurity.jpeg" class="mentor-img" alt="Vaishnavu C V">
+                    <h5>Ujjwal Grade</h5>
+                    <p class="role">Cyber Security Consultant</p>
+                    <a href="http://linkedin.com/in/ujjwalgrade" target="_blank" class="linkedin-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-2-4 col-md-6">
+                <div class="mentor-card">
+                    <img src="" class="mentor-img" alt="T. Raja Stephenson">
+                    <h5>T. Raja Stephenson</h5>
+                    <p class="role">AI/ML</p>
+                    <a href="https://www.linkedin.com" target="_blank" class="linkedin-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=====MENTORS SECTION END=======-->
+<div class="testimonial-section container">
+    <div class="col-lg-12 text-center">
+        <div class="heading1">
+            <h2 id="student">What Our Students Say</h2>
+            <div class="space36"></div>
+        </div>
+    </div>
+    <div class="row">
+
+        <!-- Testimonial 1 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Khushi Shrama.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“AspireEdge gave me the right balance of theory and practical exposure. The projects were industry-standard and helped me crack my first job interview.”</p>
+                    <span>– Khushi Sharma</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Shadab Jamil.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“I highly recommend AspireEdge! The personalized mentorship and placement guidance truly made a difference in my career journey.”</p>
+                    <span>– Shadab Jamil</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Arvind Bobonga.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“The trainers are extremely supportive and explain concepts with real-world examples. I felt confident walking into my placement interviews.”</p>
+                    <span>– Arvind Bobonga</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Anushka Khushi.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“From live classes to LMS resources, everything was structured and easy to follow. The mock tests and feedback boosted my confidence.”</p>
+                    <span>– Anushka Khushi</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Sibu Raj Singh.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“The LMS platform is excellent. I could revisit recorded sessions anytime and track my progress, which made learning more effective.”</p>
+                    <span>– Shibu Raj Singh</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Mukesh Kumar.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“The practical assignments and case studies helped me understand how technology is applied in the real world. It was truly career-transforming.”</p>
+                    <span>– Mukesh Kumar</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 7 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/sandeep Kumar.jpg" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“Unlike other training programs, AspireEdge focuses on real applications. The internship opportunities gave me hands-on experience.”</p>
+                    <span>– Sandeep Kumar</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 8 -->
+        <div class="col-md-6">
+            <div class="testimonial-box">
+                <img src="/new-images/Barsha Kumari.png" alt="Student" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>“AspireEdge not only taught me technical skills but also improved my confidence and communication through interactive sessions.”</p>
+                    <span>– Barsha Kumari</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--=====CTA AREA START=======-->
+
+<div class="cta">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="heading1-w" id="text-align">
+                    <h2 class="title tg-element-title">At AspireEdge Private Limited, We’re Committed to Learning Excellence </h2>
+                    <div class="space16"></div>
+                    <p data-aos="fade-right" data-aos-duration="700">Take the first step toward transforming your educational goals by contacting us today. Schedule a consultation with one of our LMS specialists to discuss your institutional needs and explore how our smart learning solutions can drive learner success and digital growth.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="buttons">
+                    <a href="/contact" class="cta-btn1">
+                        Request a Consultation <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://aspireedge.com/" class="cta-btn2">
+                        Explore Our LMS <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--=====CTA AREA END=======-->

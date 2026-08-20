@@ -1,0 +1,535 @@
+<style>
+    .common-hero {
+        width: 100%;
+        min-height: 530px;
+        height: 30vh; /* Full screen height or adjust as needed */
+        background-image: url('/Banner/contact.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+        .common-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* adjust opacity here */
+            z-index: 0;
+        }
+
+        .common-hero .container,
+        .common-hero .main-heading {
+            position: relative;
+            z-index: 2;
+        }
+
+            .common-hero .main-heading h1 {
+                color: #ffffff;
+                white-space: nowrap;
+            }
+
+    #brand-logo-1,
+    #brand-logo-2 {
+        max-width: 149px !important; /* or adjust to 80px, 60px, etc. */
+        height: auto !important;
+    }
+
+    #text-align {
+        text-align: justify;
+    }
+
+    .contact-page{
+        margin-bottom: 100px;
+    }
+
+    .career-section {
+        font-family: 'Poppins', sans-serif;
+        padding: 20px;
+    }
+    p{
+        margin-top: 8px;
+    }
+
+    .single-input select {
+        padding: 16px;
+        border: none;
+        background-color: #fff;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        width: 100%;
+        color: #676879;
+    }
+
+        .single-input select:focus {
+            border-color: #E31C23;
+            box-shadow: 0 0 5px rgba(227, 28, 35, 0.25);
+        }
+
+   /*  #form{
+        margin-top: 29px;
+    } */
+    #space{
+        padding-bottom: 29px;
+    }
+
+    .common-hero .main-heading {
+        text-align: left;
+    }
+
+    .common-hero .row.align-items-center.text-center {
+        text-align: left !important; /* override bootstrap center */
+        justify-content: flex-start !important;
+    }
+
+    .job-thumb-wrapper {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .job-thumb {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.4s ease-in-out; /* smooth zoom */
+    }
+
+    .job-thumb-wrapper:hover .job-thumb {
+        transform: scale(1.08); /* slightly more zoom */
+    }
+
+    .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.25);
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
+        border-radius: 8px;
+    }
+
+    .job-thumb-wrapper:hover .hover-overlay {
+        opacity: 1;
+    }
+
+
+    /* Slide-in Preview */
+    .slide-image-preview {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 50%;
+        max-width: 462px;
+        background-color: #fff;
+        padding: 20px;
+        z-index: 999;
+        display: none;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        border-radius: 10px;
+    }
+
+        .slide-image-preview.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+
+        .slide-image-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 24px;
+        color: red;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .blur-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 998;
+        display: none;
+    }
+
+        .blur-overlay.show {
+            display: block;
+        }
+        @@media (max-width: 767px) {
+    .common-hero .main-heading h1 {
+        margin-top: 81px;
+    }
+}
+    /* For mobile and smaller tablets */
+    @@media (max-width: 767px) {
+        .common-hero
+
+    {
+        height: auto !important; /* Allow content to set height */
+        min-height: auto !important;
+        padding: 60px 20px; /* Add spacing around text */
+        text-align: center; /* Keep text nice on mobile */
+    }
+
+    .common-hero .main-heading h1 {
+        font-size: 26px; /* Reduce title size for mobile */
+        line-height: 1.3;
+        white-space: normal !important; /* Prevent text from breaking weirdly */
+    }
+
+    .common-hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: justify; /* Adjust readability */
+    }
+
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!--=====HERO AREA START=======-->
+
+<div class="common-hero">
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-lg-10 m-auto">
+                <div class="main-heading">
+                    <h1>Ignite Your Journey</h1>
+
+                    <div class="space16"></div>
+
+                    
+
+                    <p>
+                        What if one opportunity could change your life?<br>
+                        At AspireEdge, we don’t just offer jobs – we create pathways for growth, innovation, and impact.
+                        Our culture encourages individuals to explore their passions, enhance their skills, and stay ahead with the latest technologies and tools.
+                        <br><br>
+                        If you're enthusiastic about Data Science, curious about Applied Intelligence, or passionate about Machine Learning, now is your time to shine.
+                        Whether you're an aspiring data wizard or a seasoned professional, AspireEdge welcomes you to be part of a future-focused, dynamic team.
+                    </p>
+
+                    <div class="space16"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--=====HERO AREA END=======-->
+
+<section class="hero10-benar">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="marquee-wrap marquee-wrap-inner">
+                    <div class="marquee-text">
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo1.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo2.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo3.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo1.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo2.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo3.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo1.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo2.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo3.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo4.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img src="/assets/img/logo/slider-logo5.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-1" src="/new-images/sp-removebg-preview.png" alt="">
+                        </div>
+
+                        <div class="brand-single-box">
+                            <img id="brand-logo-2" src="/new-images/chirkut-removebg-preview.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-after"></div>
+    </div>
+</section>
+
+<div class="space100"></div>
+
+
+<!--=====CONTACT AREA START=======-->
+
+<div class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-boxs">
+                    <div class="heading1">
+                        <h2>Current Openings</h2>
+                        <div class="space16"></div>
+                    </div>
+                    <div class="contact-box">
+                        <div class="heading">
+                            <h5><a href="https://drive.google.com/file/d/1EIlS7w-GItUZRAztcdbUD4XH67E4-GUW/view?usp=sharing" style="text-decoration: none; color: blue;">Business Development Associate</a></h5>
+                            <p>
+                                <i class="fas fa-briefcase"></i> 1 - 2 yrs &nbsp;&nbsp;
+                                <i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha
+                            </p>
+                            <p>Educational Recruitment: Any Graduates</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <div class="heading">
+                            <h5><a href="https://drive.google.com/file/d/1YWCIsUO30cQ-82I2pL9z9LPUdKwrN8Vt/view?usp=sharing" style="text-decoration: none; color: blue;">Business Development Executive</a></h5>
+                            <p>
+                                <i class="fas fa-briefcase"></i> 2 - 3 yrs &nbsp;&nbsp;
+                                <i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha
+                            </p>
+                            <p>Educational Recruitment: Any Graduates</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <div class="heading">
+                            <h5><a href="https://drive.google.com/file/d/1IZuUqO1P2lkS24O372ByRYzR5yFCO6Rs/view?usp=sharing" style="text-decoration: none; color: blue;">Business Development Manager</a></h5>
+                            <p>
+                                <i class="fas fa-briefcase"></i> 3+ yrs &nbsp;&nbsp;
+                                <i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha
+                            </p>
+                            <p>Educational Recruitment: Any Graduates</p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6" id="form">
+                <div class="heading1" id="space">
+                    <h2>Apply Now</h2>
+                    <div class="space16"></div>
+                </div>
+                <div class="contact-form-details">
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="0731dd4a-b821-4361-b474-e85ff08e8235">
+
+                        <div class="row">
+                            <!-- First Name -->
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <input type="text" name="first_name" placeholder="First Name"
+                                           pattern="[A-Za-z]{2,30}" title="Only alphabets allowed (2-30 characters)" required>
+                                </div>
+                            </div>
+
+                            <!-- Last Name -->
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <input type="text" name="last_name" placeholder="Last Name"
+                                           pattern="[A-Za-z]{2,30}" title="Only alphabets allowed (2-30 characters)" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="single-input">
+                                    <input type="tel" name="phone" placeholder="Phone"
+                                           minlength="10" maxlength="10"
+                                           oninput="if(this.value.length>10) this.value=this.value.slice(0,10);"
+                                           title="Phone number must be exactly 10 digits" required>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="single-input" id="dropdown">
+                                    <select name="position" required>
+                                        <option value="">Select Position</option>
+                                        <option value="Business Development Executive">Business Development Executive</option>
+                                        <option value="Business Development Associate">Business Development Associate</option>
+                                        <option value="Business Development Manager">Business Development Manager</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="single-input">
+                                    <label>Upload Your CV (PDF/DOC)</label>
+                                    <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="single-input">
+                                    <textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <button class="theme-btn1">Submit <span><i class="fa-solid fa-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====CONACT AREA END=======-->
+<!--=====CTA AREA START=======-->
+
+<div class="cta">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="heading1-w" id="text-align">
+                    <h2 class="title tg-element-title">At AspireEdge Private Limited, We're Committed To Businesses</h2>
+                    <div class="space16"></div>
+                    <p data-aos="fade-right" data-aos-duration="700">Take the first step towards achieving your business goals by contacting us today. Schedule a consultation with one of our IT specialists to discuss your objectives and explore how our innovative solutions can propel.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="buttons">
+                    <a href="/contact" class="cta-btn1">
+                        Request a Consultation <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="/solutions" class="cta-btn2">
+                        Explore Solution <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://aspireedge.com/" class="cta-btn2">
+                        Explore LMS <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+ 
+<!--=====CTA AREA END=======-->
